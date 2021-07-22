@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="All Test Suite" duration-ms="160822" started-at="2021-07-21T16:33:31 CST" finished-at="2021-07-21T16:36:12 CST">
+    <groups>
+    </groups>
+    <test name="C:/Users/xl/IdeaProjects/xone-selenium" duration-ms="160822" started-at="2021-07-21T16:33:31 CST" finished-at="2021-07-21T16:36:12 CST">
+      <class name="xonecms.RetrieveCell">
+        <test-method status="PASS" signature="startDriver()[pri:0, instance:xonecms.RetrieveCell@2344fc66]" name="startDriver" is-config="true" duration-ms="1757" started-at="2021-07-21T16:33:31 CST" finished-at="2021-07-21T16:33:33 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startDriver -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:xonecms.RetrieveCell@2344fc66]" name="login" duration-ms="72258" started-at="2021-07-21T16:33:33 CST" data-provider="cells" finished-at="2021-07-21T16:34:45 CST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2223]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[18219112223]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:xonecms.RetrieveCell@2344fc66]" name="closeDriver" is-config="true" duration-ms="95" started-at="2021-07-21T16:34:45 CST" finished-at="2021-07-21T16:34:45 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method status="PASS" signature="startDriver()[pri:0, instance:xonecms.RetrieveCell@2344fc66]" name="startDriver" is-config="true" duration-ms="1131" started-at="2021-07-21T16:34:45 CST" finished-at="2021-07-21T16:34:46 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startDriver -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:xonecms.RetrieveCell@2344fc66]" name="login" duration-ms="72114" started-at="2021-07-21T16:34:46 CST" data-provider="cells" finished-at="2021-07-21T16:35:59 CST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9389]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[13570129389]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:xonecms.RetrieveCell@2344fc66]" name="closeDriver" is-config="true" duration-ms="87" started-at="2021-07-21T16:35:59 CST" finished-at="2021-07-21T16:35:59 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method status="PASS" signature="startDriver()[pri:0, instance:xonecms.RetrieveCell@2344fc66]" name="startDriver" is-config="true" duration-ms="1170" started-at="2021-07-21T16:35:59 CST" finished-at="2021-07-21T16:36:00 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startDriver -->
+        <test-method status="FAIL" signature="login(java.lang.String, java.lang.String)[pri:0, instance:xonecms.RetrieveCell@2344fc66]" name="login" duration-ms="12063" started-at="2021-07-21T16:36:00 CST" data-provider="cells" finished-at="2021-07-21T16:36:12 CST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[12938932]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[13570129389]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div/div/div[2]/section/div/div[2]/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[2]/div"}
+  (Session info: chrome=91.0.4472.124)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-VBDBT7T', ip: '192.168.5.204', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_40'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\xl\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:55473}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6af0cff70396198193bab2d4f1c758ed
+*** Element info: {Using=xpath, value=/html/body/div/div/div[2]/section/div/div[2]/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[2]/div}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div/div/div[2]/section/div/div[2]/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[2]/div"}
+  (Session info: chrome=91.0.4472.124)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-VBDBT7T', ip: '192.168.5.204', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_40'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\xl\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:55473}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6af0cff70396198193bab2d4f1c758ed
+*** Element info: {Using=xpath, value=/html/body/div/div/div[2]/section/div/div[2]/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[2]/div}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at xonecms.RetrieveCell.login(RetrieveCell.java:48)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at org.testng.TestRunner$$Lambda$49/1211076369.accept(Unknown Source)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:xonecms.RetrieveCell@2344fc66]" name="closeDriver" is-config="true" duration-ms="83" started-at="2021-07-21T16:36:12 CST" finished-at="2021-07-21T16:36:12 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- xonecms.RetrieveCell -->
+    </test> <!-- C:/Users/xl/IdeaProjects/xone-selenium -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
