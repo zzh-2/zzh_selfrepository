@@ -14,7 +14,7 @@ import java.util.List;
 
 public class AnjukeSpider {
     public static void main(String[] args) throws IOException, InterruptedException {
-        String excel = "H:\\ajk.xls";
+        String excel = "D:\\toy.xlsx";
         EasyExcel.write(excel, ContentBean.class).sheet("ajk")
                 .registerWriteHandler(new CustomCellWriteHandler())
                 .doWrite(new AnjukeSpider().write( "花都"));
