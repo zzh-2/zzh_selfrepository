@@ -22,6 +22,7 @@ public class ZhihuController {
         driver = cm.openBrowser("Chrome");
         driver.get("https://www.zhihu.com/signin?next=%2F");
         driver.manage().window().maximize();
+        driver.close();
     }
 
     @Then("^Login Zhihu$")
