@@ -6,7 +6,6 @@ import com.sun.jna.Native;
 import com.sun.jna.Pointer;
 import com.sun.jna.platform.win32.User32;
 import com.sun.jna.platform.win32.WinDef;
-import com.sun.xml.internal.ws.resources.SenderMessages;
 
 public class UploadUtils {
     public void uploadFile(String filePath){
