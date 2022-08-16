@@ -33,7 +33,7 @@ public class CommonUtils {
             options.addArguments("--disable-blink-features=AutomationControlled");
             String ua = randomUserAgent();
             options.addArguments("user-agent="+ua);
-            Map command = new HashMap();
+            Map <String,Object> command = new HashMap<String,Object>();
             command.put("source", "Object.defineProperties(navigator, {webdriver:{get:()=>undefined}})");
             chromeDriver = new ChromeDriver(options);
             chromeDriver.executeCdpCommand("Page.addScriptToEvaluateOnNewDocument",command);
@@ -84,38 +84,18 @@ public class CommonUtils {
         agentList.add("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3756.400 QQBrowser/10.5.4043.400");
     }
 
-    /**
-     * 时间戳转日期时间格式
-     *
-     * @param time Long类型时间
-     * @return String类型时间
-     */
     public static String timeFormat(Long time) {
         return DateUtil.date(time * 1000).toDateStr();
     }
 
-    /**
-     * 线程等待随机时间
-     */
     public static void sleep() {
-        ThreadUtil.sleep(RandomUtil.randomInt(5) * 1000);
+        ThreadUtil.sleep(RandomUtil.randomInt(5) * 1000L);
     }
 
-    /**
-     * 随机获得一个user-agent
-     *
-     * @return user-agent
-     */
     public static String randomUserAgent() {
         return RandomUtil.randomEle(agentList);
     }
 
-    /**
-     * 获取指定user-agent
-     *
-     * @param index
-     * @return
-     */
     public static String getUserAgent(int index) {
         return agentList.get(index);
     }
