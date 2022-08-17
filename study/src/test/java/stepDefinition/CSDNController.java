@@ -19,6 +19,7 @@ public class CSDNController {
         driver = cm.openBrowser("Chrome");
         driver.get("https://csdn.net/");
         driver.manage().window().maximize();
+        driver.quit();
     }
 
     @Then("^Login CSDN$")

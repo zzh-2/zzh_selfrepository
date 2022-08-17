@@ -22,7 +22,7 @@ public class ZhihuController {
         driver = cm.openBrowser("Chrome");
         driver.get("https://www.zhihu.com/signin?next=%2F");
         driver.manage().window().maximize();
-        driver.close();
+        driver.quit();
     }
 
     @Then("^Login Zhihu$")
@@ -38,7 +38,7 @@ public class ZhihuController {
 
         Set<String> handles = driver.getWindowHandles();
         for(String handle: handles){
-            if(handle.equals(mainHandle) == false){
+            if(!handle.equals(mainHandle)){
                 driver.switchTo().window(handle);
             }
         }
@@ -56,7 +56,7 @@ public class ZhihuController {
         Thread.sleep(2000);
 
         for (String handle: handles){
-            if(handle.equals(mainHandle) == true){
+            if(handle.equals(mainHandle)){
                 driver.switchTo().window(handle);
             }
         }
