@@ -1,4 +1,4 @@
 Feature: Demo2
-Scenario: test
+Scenario: oh zhihu
   Given Open ZhiHu website
-  #Then Login Zhihu
+  Then Login Zhihu

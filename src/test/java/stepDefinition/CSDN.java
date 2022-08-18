@@ -1,5 +1,6 @@
 package stepDefinition;
 
+import PO.CSDNLoginPage;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
@@ -10,16 +11,39 @@ import utils.CommonUtils;
 import java.io.*;
 import java.util.Properties;
 
-public class CSDNController {
+public class CSDN {
     private WebDriver driver;
     private CommonUtils cm = new CommonUtils();
+    CSDNLoginPage csdnLoginPage;
 
     @Given("^Open CSDN website$")
     public void navigateToCsdn() throws Exception {
         driver = cm.openBrowser("Chrome");
+        csdnLoginPage = new CSDNLoginPage(driver);
         driver.get("https://csdn.net/");
         driver.manage().window().maximize();
-        driver.quit();
+    }
+
+    @Then("Click login button")
+    public void clickLogin() throws InterruptedException {
+        csdnLoginPage.clickLogin();
+        Thread.sleep(3000);
+        driver.switchTo().frame(csdnLoginPage.getPassportFrame());
+    }
+
+    @Then("Change login type")
+    public void selectType() {
+        csdnLoginPage.selectType();
+    }
+
+    @Then("Input username {string}")
+    public void inputUsername(String username){
+        csdnLoginPage.setTxtUsername(username);
+    }
+
+    @Then("Input password {string}")
+    public  void inputPassword(String password){
+        csdnLoginPage.setTxtPassword(password);
     }
 
     @Then("^Login CSDN$")
@@ -35,14 +59,13 @@ public class CSDNController {
         driver.findElement(By.xpath("//input[@autocomplete='username']")).sendKeys(p.getProperty("username.csdn"));
         driver.findElement(By.xpath("//input[@autocomplete='current-password']")).sendKeys(p.getProperty("password.csdn"));
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[@class='login-form-item']/button")).click();
-        Thread.sleep(2000);
-
-        Actions action = new Actions(driver);
-        action.clickAndHold(driver.findElement(By.xpath("//span[@id='nc_1_n1z']")));
-        action.moveByOffset(260,0);
-        action.perform();
-        Thread.sleep(2000);
-        driver.close();
+//        driver.findElement(By.xpath("//div[@class='login-form-item']/button")).click();
+//        Thread.sleep(2000);
+//        Actions action = new Actions(driver);
+//        action.clickAndHold(driver.findElement(By.xpath("//span[@id='nc_1_n1z']")));
+//        action.moveByOffset(260,0);
+//        action.perform();
+//        Thread.sleep(2000);
+        driver.quit();
     }
 }

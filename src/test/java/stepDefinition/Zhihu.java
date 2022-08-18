@@ -13,7 +13,7 @@ import java.io.InputStream;
 import java.util.Properties;
 import java.util.Set;
 
-public class ZhihuController {
+public class Zhihu {
     private WebDriver driver;
     private CommonUtils cm = new CommonUtils();
 
@@ -22,7 +22,6 @@ public class ZhihuController {
         driver = cm.openBrowser("Chrome");
         driver.get("https://www.zhihu.com/signin?next=%2F");
         driver.manage().window().maximize();
-        driver.quit();
     }
 
     @Then("^Login Zhihu$")
@@ -52,21 +51,20 @@ public class ZhihuController {
         Thread.sleep(2000);
         driver.findElement(By.xpath("//input[@id='p']")).sendKeys(p.getProperty("password.zhihu"));
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//input[@id='login_button']")).click();
-        Thread.sleep(2000);
-
-        for (String handle: handles){
-            if(handle.equals(mainHandle)){
-                driver.switchTo().window(handle);
-            }
-        }
-        Thread.sleep(2000);
-
-        driver.findElement(By.xpath("(//input[@class='Input'])[1]")).sendKeys("UZI");
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//button[@class='Button SearchBar-searchButton Button--primary Button--blue']")).click();
-        Thread.sleep(2000);
-
-        //driver.quit();
+//        driver.findElement(By.xpath("//input[@id='login_button']")).click();
+//        Thread.sleep(2000);
+//
+//        for (String handle: handles){
+//            if(handle.equals(mainHandle)){
+//                driver.switchTo().window(handle);
+//            }
+//        }
+//        Thread.sleep(2000);
+//
+//        driver.findElement(By.xpath("(//input[@class='Input'])[1]")).sendKeys("UZI");
+//        Thread.sleep(2000);
+//        driver.findElement(By.xpath("//button[@class='Button SearchBar-searchButton Button--primary Button--blue']")).click();
+//        Thread.sleep(2000);
+        driver.quit();
     }
 }

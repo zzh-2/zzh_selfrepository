@@ -4,7 +4,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = ".//feature/",
+        features = ".//feature/demo.feature",
         glue = "stepDefinition",
         dryRun = false,
         plugin = {"pretty", "html:test-output"},
