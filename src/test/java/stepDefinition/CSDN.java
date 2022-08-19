@@ -1,15 +1,10 @@
 package stepDefinition;
 
-import PO.CSDNLoginPage;
+import po.CSDNLoginPage;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
 import utils.CommonUtils;
-
-import java.io.*;
-import java.util.Properties;
 
 public class CSDN {
     private WebDriver driver;
@@ -37,35 +32,13 @@ public class CSDN {
     }
 
     @Then("Input username {string}")
-    public void inputUsername(String username){
+    public void inputUsername(String username) {
         csdnLoginPage.setTxtUsername(username);
     }
 
     @Then("Input password {string}")
-    public  void inputPassword(String password){
+    public void inputPassword(String password) {
         csdnLoginPage.setTxtPassword(password);
-    }
-
-    @Then("^Login CSDN$")
-    public void loginCsdn() throws IOException, InterruptedException {
-        InputStream ip = new BufferedInputStream(new FileInputStream("src/test/resources/run.properties"));
-        Properties p = new Properties();
-        p.load(ip);
-
-        driver.findElement(By.xpath("//div[@class='toolbar-btn toolbar-btn-login csdn-toolbar-fl ']")).click();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("(//div[@class='login-box-tabs-items']/span)[4]")).click();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//input[@autocomplete='username']")).sendKeys(p.getProperty("username.csdn"));
-        driver.findElement(By.xpath("//input[@autocomplete='current-password']")).sendKeys(p.getProperty("password.csdn"));
-        Thread.sleep(2000);
-//        driver.findElement(By.xpath("//div[@class='login-form-item']/button")).click();
-//        Thread.sleep(2000);
-//        Actions action = new Actions(driver);
-//        action.clickAndHold(driver.findElement(By.xpath("//span[@id='nc_1_n1z']")));
-//        action.moveByOffset(260,0);
-//        action.perform();
-//        Thread.sleep(2000);
         driver.quit();
     }
 }
