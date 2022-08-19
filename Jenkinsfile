@@ -19,9 +19,9 @@ pipeline{
     	 success {
               emailext(
                             body: '$DEFAULT_CONTENT',
-                            subject: 'Seccussfully.',
+                            subject: '$JOB_NAME',
                             from: '',
-                            to: '1184599859@qq.com'
+                            to: '$DEFAULT_RECIPIENTS'
                       )
 
 
