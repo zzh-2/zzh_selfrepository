@@ -18,7 +18,7 @@ pipeline{
     post{
          always{
               script{
-                         allure includeProperties: false, jdk: '', report: 'report/allure-report', results: [[path: 'D:/Jenkins\workspace/first pipeline/report/allure-results']]
+                         allure includeProperties: false, jdk: '', report: 'report/allure-report', results: [[path: 'D:/Jenkins/workspace/first pipeline/report/allure-results']]
               }
          }
 
