@@ -27,16 +27,17 @@ public class CommonUtils {
         ChromeDriver chromeDriver;
         if (browserType.equals("Chrome")) {
             System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\driver\\chromedriver.exe");
-            ChromeOptions options = new ChromeOptions();
-            options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-            //options.addArguments("--headless");
-            options.addArguments("--disable-blink-features=AutomationControlled");
-            String ua = randomUserAgent();
-            options.addArguments("user-agent="+ua);
-            Map <String,Object> command = new HashMap<String,Object>();
-            command.put("source", "Object.defineProperties(navigator, {webdriver:{get:()=>undefined}})");
-            chromeDriver = new ChromeDriver(options);
-            chromeDriver.executeCdpCommand("Page.addScriptToEvaluateOnNewDocument",command);
+//            ChromeOptions options = new ChromeOptions();
+//            options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+//            options.addArguments("--headless");
+//            options.addArguments("--disable-blink-features=AutomationControlled");
+//            String ua = randomUserAgent();
+//            options.addArguments("user-agent="+ua);
+//            Map <String,Object> command = new HashMap<String,Object>();
+//            command.put("source", "Object.defineProperties(navigator, {webdriver:{get:()=>undefined}})");
+//            chromeDriver = new ChromeDriver(options);
+//            chromeDriver.executeCdpCommand("Page.addScriptToEvaluateOnNewDocument",command);
+            chromeDriver = new ChromeDriver();
             return chromeDriver;
         } else if (browserType.equals("Firefox")) {
             System.setProperty("webdriver.gecko.driver", "src\\test\\resources\\driver\\geckodriver.exe");
