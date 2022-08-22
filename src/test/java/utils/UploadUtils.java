@@ -17,7 +17,7 @@ public class UploadUtils {
     public WinDef.HWND showWindow(String windowTitle){
         WinDef.HWND hwnd = User32.INSTANCE.FindWindow(null, windowTitle);
         if(hwnd == null){
-            System.out.println("不存在");
+            System.out.println("Can find hwnd.");
         }else{
             User32.INSTANCE.ShowWindow(hwnd, 9);
             User32.INSTANCE.SetForegroundWindow(hwnd);
