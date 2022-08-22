@@ -15,7 +15,17 @@ pipeline{
         }
     }
 
+    post('Results') { // 执行之后的操作
+
+        }
+
     post{
+         always{
+              script{
+                        allure includeProperties: false, jdk: '', report: 'report/allure-report', results: [[path: 'report/allure-results']]
+              }
+         }
+
     	 success {
               emailext(
                             body: '$DEFAULT_CONTENT',
