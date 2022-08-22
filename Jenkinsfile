@@ -18,7 +18,7 @@ pipeline{
     post{
          always{
               script{
-                        allure includeProperties: false, jdk: '', report: 'report/allure-report', results: [[path: 'report/allure-results']]
+                        allure includeProperties: false, jdk: '', report: 'report/allure-report', results: [[path: 'report/allure']]
               }
          }
 
