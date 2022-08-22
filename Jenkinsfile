@@ -14,11 +14,7 @@ pipeline{
             }
         }
     }
-
-    post('Results') { // 执行之后的操作
-
-        }
-
+    
     post{
          always{
               script{
