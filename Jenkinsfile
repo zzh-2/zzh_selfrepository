@@ -5,6 +5,11 @@ pipeline{
         }
     }
 
+    environment {
+	    VERSION = "${TIME}"
+		PATH = "/home/zzh/jdk1.8.0_341/bin"
+    }
+
     stages{
         stage ('cd dir and chmod'){
             steps{
