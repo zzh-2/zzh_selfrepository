@@ -1,9 +1,10 @@
 pipeline{
-    agent{
-        node{
-            label "Test"
-        }
-    }
+//     agent{
+//         node{
+//             label "Test"
+//         }
+//     }
+    agent any
 
     stages{
         stage ('cd dir and chmod'){
