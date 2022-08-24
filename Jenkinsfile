@@ -8,22 +8,20 @@ pipeline{
     stages{
         stage ('cd dir'){
             steps{
-                step{
-                    sh 'cd /var/lib/jenkins/workspace/'Maven zhihu'/src/test/resources/driver'
-                }
+                    sh "cd /var/lib/jenkins/workspace/'Maven zhihu'/src/test/resources/driver"
             }
         }
 
         stage ('chmod driver'){
             steps{
-                sh 'chmod 777 chromedriver'
+                sh "chmod 777 chromedriver"
             }
         }
 
         stage ('Install stage'){
             steps{
                 withMaven(maven : 'maven'){
-                    bat 'mvn clean install'
+                    sh "mvn clean install"
                 }
             }
         }
