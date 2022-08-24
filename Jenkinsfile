@@ -8,7 +8,9 @@ pipeline{
     stages{
         stage ('cd dir'){
             steps{
-                sh 'cd /var/lib/jenkins/workspace/'Maven zhihu'/src/test/resources/driver'
+                step{
+                    sh 'cd /var/lib/jenkins/workspace/'Maven zhihu'/src/test/resources/driver'
+                }
             }
         }
 
