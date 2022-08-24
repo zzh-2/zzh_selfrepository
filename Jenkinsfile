@@ -15,7 +15,7 @@ pipeline{
 
         stage ('Install stage'){
             steps{
-                withMaven(maven : 'maven'){
+                withMaven(maven : 'maven', jdk : 'Linux JDK'){
                     sh "mvn clean install"
                 }
             }
