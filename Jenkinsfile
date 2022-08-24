@@ -1,11 +1,18 @@
 pipeline{
     agent{
         node{
-            label "win123"
+            label "Test"
         }
     }
 
     stages{
+        stage ('Make driver executable'){
+            steps{
+                sh 'cd /var/lib/jenkins/workspace/'Maven zhihu'/src/test/resources/driver'
+                sh 'chmod 777 chromedriver'
+            }
+        }
+
         stage ('Install stage'){
             steps{
                 withMaven(maven : 'maven'){
