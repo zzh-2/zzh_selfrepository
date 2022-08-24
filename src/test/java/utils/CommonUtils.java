@@ -29,7 +29,7 @@ public class CommonUtils {
             System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver");
             ChromeOptions options = new ChromeOptions();
 //            options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-//            options.addArguments("--headless");
+            options.addArguments("--headless");
             options.addArguments("–-no-sandbox");
 //            options.addArguments("--disable-blink-features=AutomationControlled");
 //            String ua = randomUserAgent();
