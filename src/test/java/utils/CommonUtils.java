@@ -26,7 +26,7 @@ public class CommonUtils {
         WebDriver fireFoxDriver;
         ChromeDriver chromeDriver;
         if (browserType.equals("Chrome")) {
-            System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver");
 //            ChromeOptions options = new ChromeOptions();
 //            options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 //            options.addArguments("--headless");
