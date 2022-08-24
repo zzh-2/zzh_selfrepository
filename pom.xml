@@ -24,6 +24,7 @@
                 <source>1.8</source>
                 <target>1.8</target>
                 <encoding>UTF-8</encoding>
+                <executable>/home/zzh/jdk1.8.0_341/bin/javac</executable>
             </configuration>
         </plugin>
 
