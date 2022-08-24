@@ -6,15 +6,10 @@ pipeline{
     }
 
     stages{
-        stage ('cd dir'){
+        stage ('cd dir and chmod'){
             steps{
                     sh "cd /var/lib/jenkins/workspace/'Maven zhihu'/src/test/resources/driver"
-            }
-        }
-
-        stage ('chmod driver'){
-            steps{
-                sh "chmod 777 chromedriver"
+                    sh "chmod 777 chromedriver"
             }
         }
 
