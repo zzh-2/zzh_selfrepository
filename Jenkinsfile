@@ -1,15 +1,22 @@
 pipeline{
-    agent{
-        node{
-            label "win123"
-        }
-    }
+//     agent{
+//         node{
+//             label "Test"
+//         }
+//     }
+    agent any
 
     stages{
+        stage ('cd dir and chmod'){
+            steps{
+                    sh "chmod 777 /var/lib/jenkins/workspace/\'second pipeline\'/src/test/resources/driver/chromedriver"
+            }
+        }
+
         stage ('Install stage'){
             steps{
-                withMaven(maven : 'maven'){
-                    bat 'mvn clean install'
+                withMaven(maven : 'maven', jdk : 'Linux JDK'){
+                    sh "mvn clean install"
                 }
             }
         }
