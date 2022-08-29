@@ -1,34 +1,5 @@
-ccc
+aaa
+bbb
+aaa
 bbb
 ccc
-ccc
-aaa
-aaa
-aaa
-ccc
-bbb
-ccc
-ccc
-aaa
-aaa
-aaa
-ccc
-bbb
-ccc
-ccc
-aaa
-aaa
-aaaddddddddddddddddddddddd
-ccc
-bbb
-ccc
-ccc
-aaa
-aaa
-aaaccc
-   bbb
-   ccc
-   ccc
-   aaa
-   aaa
-   aaa

@@ -11,7 +11,7 @@ import java.util.*;
 
 public class Cal2 {
     public static void main(String[] args) throws IOException {
-        InputStreamReader isr = new InputStreamReader(new FileInputStream("H:\\zzh_selfrepository\\src\\test\\resources\\test.txt"));
+        InputStreamReader isr = new InputStreamReader(new FileInputStream("D:\\zzh_selfrepository\\src\\test\\resources\\test.txt"));
         BufferedReader reader = new BufferedReader(isr);
 
         String content;
@@ -22,8 +22,6 @@ public class Cal2 {
             arrayList.add(content);
         }
 
-        System.out.println(arrayList);
-
         Integer count = null;
         for(String word: arrayList){
             count = map.put(word, 1);
@@ -32,18 +30,25 @@ public class Cal2 {
             }
         }
 
-        int maxCount = 0;
-        String maxWord = null;
-        for(HashMap.Entry<String,Integer> e : map.entrySet()){
-            int value = e.getValue();
-            String word = e.getKey();
-            if(e.getValue() > maxCount){
-                maxCount = value;
-                maxWord = word;
+        List<Map.Entry<String,Integer>> entryList = new ArrayList<Map.Entry<String,Integer>>(map.entrySet());
+
+        Collections.sort(entryList, new Comparator<Map.Entry<String, Integer>>() {
+                    @Override
+                    public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
+                        return o2.getValue()-o1.getValue();
+                    }
+                }
+        );
+
+
+        int maxCount = entryList.get(0).getValue();
+        for(Map.Entry<String,Integer> e : entryList){
+            if(e.getValue() >= maxCount){
+                System.out.println("maxCount=  "+ e.getValue());
+                System.out.println("maxWord=  "+ e.getKey());
+            }else {
+                break;
             }
         }
-
-        System.out.println("maxCount=  "+maxCount);
-        System.out.println("maxWord=  "+ maxWord);
     }
 }
