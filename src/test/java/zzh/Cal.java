@@ -17,13 +17,7 @@ public class Cal {
 
         HashMap<Integer,String> map = new HashMap<Integer, String>();
         HashMap<Integer,String> map2 = new HashMap<Integer, String>();
-        IdentityHashMap<String,String> map3 = new IdentityHashMap<String,String>();
         ArrayList<Integer> list = new ArrayList<Integer>();
-
-        map3.put("1","z");
-        map3.put("1","Z");
-        map3.put(new String("1"),"H");
-        System.out.println(map3);
 
         while((content = reader.readLine()) != null){
             map.put(currentLine, content);
