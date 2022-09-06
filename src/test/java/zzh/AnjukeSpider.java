@@ -17,13 +17,13 @@ public class AnjukeSpider {
         String excel = "H:\\ajk.xls";
         EasyExcel.write(excel, ContentBean.class).sheet("ajk")
                 .registerWriteHandler(new CustomCellWriteHandler())
-                .doWrite(new AnjukeSpider().write( "花都"));
+                .doWrite(new AnjukeSpider().write("花都"));
         //
     }
 
     public List<ContentBean> write(String subCity) throws IOException, InterruptedException {
         ArrayList<ContentBean> contents = new ArrayList<ContentBean>();
-        for(int i=1; i<2; i++){
+        for (int i = 1; i < 2; i++) {
             String request = "https://gz.fang.anjuke.com/loupan/all/p" + Integer.toString(i) + "/s?kw=" + subCity;
             System.out.println(request);
 

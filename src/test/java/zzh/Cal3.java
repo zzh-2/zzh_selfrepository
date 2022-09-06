@@ -5,49 +5,20 @@ import java.util.*;
 public class Cal3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double y = Double.parseDouble(sc.next());
-        int numCount = 0;
-        int temp = (int)y;
-        double temp2;
-        double temp3 = 0;
-        int temp4 = (int)y;
-        int temp5 = (int)y;
+        int x = Integer.parseInt(sc.next());
 
-        while((temp % 10) >= 1 ){
-            temp = temp / 10;
-            numCount++;
+        if (x < 0 || (x % 10 == 0 && x != 0)) {
+            System.out.println(1);
         }
 
-        if(numCount ==1 ){
-            System.out.println(y==temp5);
-        }else if(numCount % 2 == 0){
-            for(int i = numCount / 2; i <= numCount / 2 && i > 0; i--){
-                temp2 = (temp4 % 10) * (Math.pow(10, i-1));
-                temp4 = temp4 / 10;
-                temp3 = temp3 + temp2;
-            }
-            System.out.println(temp3==temp4);
-        }else{
-            int j = numCount / 2 + 1;
-            for(int i = j; i <= j && i > 0; i--){
-                temp2 = (temp4 % 10) * (Math.pow(10, i-1));
-                temp4 = temp4 / 10;
-                temp3 = temp3 + temp2;
-                j--;
-            }
-            temp5 = (int)(temp5 / Math.pow(10,j+1));
-            System.out.println(temp3==temp5);
+        int reverseNum = 0;
+        while (x > reverseNum) {
+            reverseNum = reverseNum * 10 + x % 10;
+            x /= 10;
+            System.out.println("reverseNum:" + reverseNum);
+            System.out.println("x:" + x);
         }
 
-//        int i = 1212;
-//        String sI = String.valueOf(i);
-//        StringBuilder sb= new StringBuilder(sI);
-//
-//        System.out.println(i);
-//        String bs = sb.reverse().toString();
-//        System.out.println(bs);
-//
-//        boolean result = bs.equals(sI);
-//        System.out.println(result);
+        System.out.println(x == reverseNum || x == reverseNum / 10);
     }
 }
